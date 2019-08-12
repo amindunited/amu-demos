@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './Header';
+import MovieList from './MovieList';
 
-describe('Header', () => {
+describe('MovieList', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Header />, div);
+    ReactDOM.render(<MovieList />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

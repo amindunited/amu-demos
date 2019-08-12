@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './Header';
+import ${titleCaseName} from './${titleCaseName}';
 
-describe('Header', () => {
+describe('${titleCaseName}', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Header />, div);
+    ReactDOM.render(<${titleCaseName} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

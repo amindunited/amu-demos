@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './Header';
+import Routing from './Routing';
 
-describe('Header', () => {
+describe('Routing', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Header />, div);
+    ReactDOM.render(<Routing />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });
