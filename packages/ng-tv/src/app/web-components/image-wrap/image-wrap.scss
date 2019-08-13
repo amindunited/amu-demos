@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+image-wrap img {
+  display: none;
+}
+image-wrap .image-wrap {
+  background-color: black;
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  text-align: center;
+}
+image-wrap img.loaded {
+  display: inline-block;
+  position: relative;
+  max-width: 80px;
+  max-height: 80px;
+  background-color: #000000;
+  margin: auto;
+}
+
+.image-loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: #000000;
+}
+.image-loading.hidden {
+  display: none;
+}
+.image-loading div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.image-loading div:nth-child(1) {
+  left: 8px;
+  animation: image-loading1 0.6s infinite;
+}
+.image-loading div:nth-child(2) {
+  left: 8px;
+  animation: image-loading2 0.6s infinite;
+}
+.image-loading div:nth-child(3) {
+  left: 32px;
+  animation: image-loading2 0.6s infinite;
+}
+.image-loading div:nth-child(4) {
+  left: 56px;
+  animation: image-loading3 0.6s infinite;
+}
+@keyframes image-loading1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes image-loading3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes image-loading2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}

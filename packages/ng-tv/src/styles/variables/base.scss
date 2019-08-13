@@ -1,0 +1,17 @@
+
+$alpha_varient: 0.1 !default;
+$colour_varient: 7% !default;
+
+$base_measure: 8px !default;
+$border_radius: 3px !default;
+$border_width: 1px !default;
+$link_transition: .3s !default;
+
+$font_path: './assets/fonts/' !default;
+
+$base_font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// -webkit-font-smoothing: antialiased;
+// -moz-osx-font-smoothing: grayscale;
+$base_font_size: $base_measure * 2;
+$small_font_size: $base_measure * 1.5;

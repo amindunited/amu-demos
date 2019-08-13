@@ -1,0 +1,13 @@
+@import '../../../styles/index.scss';
+
+:host {
+  display: block;
+}
+
+input {
+  border-radius: $border_radius;
+  border: solid 1px $BRAND_SECONDARY;
+  width: 100%;
+  height: $base-measure * 6;
+  padding: $base-measure;
+}

@@ -1,0 +1,14 @@
+<div id="search-component">
+  <h4>TV Search</h4>
+
+  <form [formGroup]="tvSearchForm" (ngSubmit)="onSubmit(tvSearchForm.value)">
+    <div class="grid">
+      <div class="col-span-11-12">
+        <input #show placeholder="TV Show Name" formControlName="show">
+      </div>
+      <div class="col-span-1-12">
+        <button class="button" type="submit" >Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

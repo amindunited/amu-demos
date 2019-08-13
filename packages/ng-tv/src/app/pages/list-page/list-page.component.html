@@ -1,0 +1,34 @@
+<div class="card">
+  <app-search-bar></app-search-bar>
+</div>
+<div class="card">
+  <ul>
+    <li *ngFor="let show of searchService.shows | async as shows; index as i; first as isFirst">
+      <img src="{{show.show?.image?.medium}}"/>
+      <div class="info-wrap">
+        <div class="grid headings">
+          <div class="title col-span-6-12">
+            Title
+          </div>
+          <div class="year col-span-3-12">
+            Year
+          </div>
+          <div class="rating col-span-3-12">
+            Rating
+          </div>
+        </div>
+        <div class="grid">
+          <div class="title col-span-6-12">
+            {{show.show.name}}
+          </div>
+          <div class="year col-span-3-12">
+            {{show.show.premiered}}
+          </div>
+          <div class="rating col-span-3-12">
+            {{show.show.rating.average}}
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
