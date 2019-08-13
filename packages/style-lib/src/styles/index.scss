@@ -1,0 +1,12 @@
+$BRAND_TERTIARY: #E5FCC2;
+$BRAND_QUATERNARY: #9DE0AD;
+$BRAND_SECONDARY: #45ADA8;
+$BRAND_PRIMARY:#547980;
+$GREY:#594F4F;
+
+@import './variables/base.scss';
+@import './variables/colours.scss';
+@import './mixins/container';
+@import './mixins/card';
+@import './mixins/search-list.scss';
+@import './mixins/search-list-item.scss';

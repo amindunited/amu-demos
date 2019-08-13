@@ -1,0 +1,59 @@
+{
+  "name": "@amu-demos/style-lib",
+  "version": "0.0.0",
+  "description": "A SCSS library of variables and mixins for styling AMU-demos",
+  "keywords": [
+    "SCSS",
+    "SASS",
+    "StyleLibrary"
+  ],
+  "author": "Robin Buckley <robin.buckley@auspost.com.au>",
+  "homepage": "https://amindunited.github.io/amu-demos/",
+  "license": "MIT",
+  "main": "lib/style-lib.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amindunited/amu-demos.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config",
+    "create": "node ./scripts/create",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/amindunited/amu-demos/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "dart-sass": "^1.22.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^3.1.0",
+    "sass": "^1.22.9",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^1.0.0",
+    "to-string-loader": "^1.1.5",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "htm": "^2.2.1"
+  }
+}

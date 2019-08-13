@@ -1,0 +1,143 @@
+@import '../../winter-2019-vars.scss';
+@import '../../styles/variables/colours.scss';
+
+div > ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.colour-group {
+  margin: $base-measure;
+  margin-bottom: $base-measure * 3;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  box-shadow: $card_box-shadow;
+}
+
+.colour-group ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+}
+
+div > ul > li {
+  margin: 0;
+  padding: 0;
+  width: 20%;
+}
+
+colour-swatch {
+  display: block;
+  width: $base-measure * 18;
+  flex-grow: 0;
+  width: 100%;
+  font-size: $small_font_size;
+}
+
+colour-swatch .colour-swatch {
+  width: 100%;
+  height: 100px;
+}
+
+colour-swatch .var-name {
+  font-weight: bold;
+  text-align: center;
+  margin-top: $base_measure;
+  margin-bottom: $base_measure;
+  overflow: hidden;
+}
+
+colour-swatch .toast {
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-size: $base-measure * 2;
+  padding: $base-measure * 2;
+  border: solid 1px $GREY;
+  background-color: $WHITE;
+}
+
+colour-swatch .toast.hidden {
+  display: none;
+}
+
+.group-name {
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  text-align: center;
+  padding: $base-measure;
+  padding: $base-measure;
+}
+
+$colourArray: (
+  'WHITE': $WHITE,
+  'BLACK': $BLACK,
+  'GREY': $GREY,
+  'GREY_LIGHTEST': $GREY_LIGHTEST,
+  'GREY_LIGHT': $GREY_LIGHT,
+  'GREY_DARK': $GREY_DARK,
+  'GREY_DARKEST': $GREY_DARKEST,
+  'BRAND_PRIMARY': $BRAND_PRIMARY,
+  'BRAND_PRIMARY_LIGHTEST': $BRAND_PRIMARY_LIGHTEST,
+  'BRAND_PRIMARY_LIGHT': $BRAND_PRIMARY_LIGHT,
+  'BRAND_PRIMARY_DARK': $BRAND_PRIMARY_DARK,
+  'BRAND_PRIMARY_DARKEST': $BRAND_PRIMARY_DARKEST,
+  'BRAND_SECONDARY': $BRAND_SECONDARY,
+  'BRAND_SECONDARY_LIGHTEST': $BRAND_SECONDARY_LIGHTEST,
+  'BRAND_SECONDARY_LIGHT': $BRAND_SECONDARY_LIGHT,
+  'BRAND_SECONDARY_DARK': $BRAND_SECONDARY_DARK,
+  'BRAND_SECONDARY_DARKEST': $BRAND_SECONDARY_DARKEST,
+  'BRAND_TERTIARY': $BRAND_TERTIARY,
+  'BRAND_TERTIARY_LIGHTEST': $BRAND_TERTIARY_LIGHTEST,
+  'BRAND_TERTIARY_LIGHT': $BRAND_TERTIARY_LIGHT,
+  'BRAND_TERTIARY_DARK': $BRAND_TERTIARY_DARK,
+  'BRAND_TERTIARY_DARKEST': $BRAND_TERTIARY_DARKEST,
+  'BRAND_QUATERNARY': $BRAND_QUATERNARY,
+  'BRAND_QUATERNARY_LIGHTEST': $BRAND_QUATERNARY_LIGHTEST,
+  'BRAND_QUATERNARY_LIGHT': $BRAND_QUATERNARY_LIGHT,
+  'BRAND_QUATERNARY_DARK': $BRAND_QUATERNARY_DARK,
+  'BRAND_QUATERNARY_DARKEST': $BRAND_QUATERNARY_DARKEST,
+  'SUCCESS_LIGHTEST': $SUCCESS_LIGHTEST,
+  'SUCCESS_LIGHT': $SUCCESS_LIGHT,
+  'SUCCESS': $SUCCESS,
+  'SUCCESS_DARK': $SUCCESS_DARK,
+  'SUCCESS_DARKEST': $SUCCESS_DARKEST,
+  'INFO_LIGHTEST': $INFO_LIGHTEST,
+  'INFO_LIGHT': $INFO_LIGHT,
+  'INFO': $INFO,
+  'INFO_DARK': $INFO_DARK,
+  'INFO_DARKEST': $INFO_DARKEST,
+  'ERROR_LIGHTEST': $ERROR_LIGHTEST,
+  'ERROR_LIGHT': $ERROR_LIGHT,
+  'ERROR': $ERROR,
+  'ERROR_DARK': $ERROR_DARK,
+  'WARN_LIGHTEST': $WARN_LIGHTEST,
+  'WARN_LIGHT': $WARN_LIGHT,
+  'WARN': $WARN,
+  'WARN_DARK': $WARN_DARK,
+  'WARN_DARKEST': $WARN_DARKEST,
+  'PROMOTE': $PROMOTE,
+  'PROMOTE_LIGHT': $PROMOTE_LIGHT,
+  'PROMOTE_LIGHTEST': $PROMOTE_LIGHTEST,
+  'PROMOTE_DARK': $PROMOTE_DARK,
+  'PROMOTE_DARKEST': $PROMOTE_DARKEST,
+  'AUX_RED': $AUX_RED,
+  'AUX_GREEN': $AUX_GREEN,
+  'AUX_BLUE': $AUX_BLUE,
+  'AUX_ORANGE': $AUX_ORANGE,
+  'AUX_YELLOW': $AUX_YELLOW,
+  'AUX_PURPLE': $AUX_PURPLE,
+);
+
+@each $variableName, $varValue in $colourArray {
+  .var-#{$variableName} {
+    padding: 1rem;
+    background-color: $varValue;
+  }
+}

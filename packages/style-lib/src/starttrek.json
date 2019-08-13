@@ -1,0 +1,57 @@
+{
+  "score": 29.680738,
+  "show": {
+    "id": 490,
+    "url": "http://www.tvmaze.com/shows/490/star-trek",
+    "name": "Star Trek",
+    "type": "Scripted",
+    "language": "English",
+    "genres": [
+      "Adventure",
+      "Science-Fiction"
+    ],
+    "status": "Ended",
+    "runtime": 60,
+    "premiered": "1966-09-08",
+    "officialSite": null,
+    "schedule": {
+      "time": "20:30",
+      "days": [
+        "Thursday"
+      ]
+    },
+    "rating": {
+      "average": 8.5
+    },
+    "weight": 99,
+    "network": {
+      "id": 1,
+      "name": "NBC",
+      "country": {
+        "name": "United States",
+        "code": "US",
+        "timezone": "America/New_York"
+      }
+    },
+    "webChannel": null,
+    "externals": {
+      "tvrage": 5333,
+      "thetvdb": 77526,
+      "imdb": "tt0060028"
+    },
+    "image": {
+      "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/70/176259.jpg",
+      "original": "http://static.tvmaze.com/uploads/images/original_untouched/70/176259.jpg"
+    },
+    "summary": "<p>The original <b>Star Trek</b> series focuses on the 23rd century adventures of Captain James T. Kirk and the U.S.S. <i>Enterprise </i>(NCC-1701), a powerful interstellar spacecraft dispatched by Earth-based Starfleet Command to explore the galaxy. Kirk commands a crew of 430 men and women aboard his starship, which can travel at speeds surpassing the speed of light. Kirk's five-year mission—and his mandate from Starfleet—is to seek out new life and new civilizations, and to boldly go where no man has gone before.</p>",
+    "updated": 1561415522,
+    "_links": {
+      "self": {
+        "href": "http://api.tvmaze.com/shows/490"
+      },
+      "previousepisode": {
+        "href": "http://api.tvmaze.com/episodes/44455"
+      }
+    }
+  }
+}

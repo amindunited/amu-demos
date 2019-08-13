@@ -1,0 +1,30 @@
+@import './winter-2019-vars.scss';
+@import './styles/index.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: $base_font;
+  font-size: $base_font_size;
+}
+
+.container {
+  @include container;
+}
+.card {
+  @include card;
+}
+
+colour-demo {
+  // width: 80%;
+  display: block;
+}
+
+ul {
+  @include search-list;
+}
+li {
+  @include search-list-item;
+}
