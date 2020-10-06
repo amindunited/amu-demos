@@ -10,20 +10,13 @@ import SEO from "../components/seo"
 
 // <Link to="/page-2/">Go to page 2</Link>
 const IndexPage = () => {
-  try {
-    customElements.define('htm-test', htmTest);
-  } catch (e) {}
-  return <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+  return (
+    <div className="App container">
+      <brand-header></brand-header>
+      <ListPage></ListPage>
+      <brand-footer></brand-footer>
     </div>
-    <htm-test></htm-test>
-    <Footer></Footer>
-  </Layout>
+  );
 }
 
 export default IndexPage

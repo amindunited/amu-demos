@@ -1,4 +1,4 @@
-import headerCSS from './brand-header.scss';
+import headerCSS from './brand-header.mod.scss';
 
 class BrandHeader extends HTMLElement {
   constructor() {
@@ -17,13 +17,13 @@ class BrandHeader extends HTMLElement {
       <slot>
         <header class="grid">
           <div class="col-span-1-12">
-            <a href="https://tvmaze.com">TV Maze</a>
+            <a aria-label="Link to TV Maze" href="https://tvmaze.com">TV Maze</a>
           </div>
           <div class="col-span-1-12">
-            <a href="https://github.com/amindunited">Github</a>
+            <a aria-label="Link to Github" href="https://github.com/amindunited">Github</a>
           </div>
           <div class="col-span-1-12">
-            <a href="https://twitter.com/amindunited">Twitter</a>
+            <a aria-label="Link to Twitter" href="https://twitter.com/amindunited">Twitter</a>
           </div>
         </header>
       </slot>

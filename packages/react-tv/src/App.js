@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.scss';
 
-// import Header from './components/Header';
-import Footer from './components/Footer'
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Routing from './components/Routing';
+import ListPage from './components/ListPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
+      {/* <Header/> */}
       <brand-header></brand-header>
-      <Routing></Routing>
-      <Footer></Footer>
+      <ListPage></ListPage>
+      {/* <brand-footer></brand-footer> */}
+      <Footer/>
     </div>
   );
 }

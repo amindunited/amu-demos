@@ -3,7 +3,7 @@ import './Footer.scss';
 
 function Footer () {
   return (
-    <div>Footer Works</div>
+    <footer>React TV Footer 👣</footer>
   );
 }
 

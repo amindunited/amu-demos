@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import {content} from "import.html"
+    document.body.appendChild(content);
+  </script>
+
+  <script>
+class PlainWebComponent extends HTMLElement {
+  render () {
+    const fragment = document.createDocumentFragment();
+    const container = document.createElement('div');
+		container.innerHTML = `
+      <p>Here's some text - above</p>
+      <slot></slot>
+      <p>Here's some text - below</p>
+		`;
+    fragment.appendChild(container);
+		this.shadow.appendChild(fragment);
+    // if you don't want to use the shadow DOM:
+    // this.appendChild(fragment);
+  }
+}
+customElements.define('plain-webcomponent', PlainWebComponent);
+  </script>
+<plain-webcomponent>
+  This is slotted content
+</plain-webcomponent>
+</body>
+</html>

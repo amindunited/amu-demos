@@ -1,0 +1,20 @@
+@import '../winter-2019-vars.scss';
+@import '../styles/index.scss';
+
+:host {
+  display: block;
+  background-color: $BRAND_PRIMARY;
+  padding: $base_measure $base_measure * 2;
+  margin-bottom: $base_measure * 2;
+  .grid {
+    @include grid;
+    .col-span-1-12 { @include column(1); }
+  }
+  a, a:visited {
+    color: $BRAND_TERTIARY;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    height: $base_measure * 3;
+  }
+}

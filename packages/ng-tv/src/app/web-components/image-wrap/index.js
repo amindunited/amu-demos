@@ -1,12 +1,17 @@
 
 class ImageWrap extends HTMLElement {
+
+  observedAttributes = ['url'];
+
   constructor() {
     super();
     this.shadow = this.attachShadow({mode: 'open'});
   }
 
-  connectedCallback () {
+  connectedCallback () { this.render(); }
+  render () {
     console.log('connected?');
+    this.shadow.innerHTML = '';
     const fragmentOne = document.createDocumentFragment();
     const containerOne = document.createElement('div');
     containerOne.innerHTML = `
@@ -32,14 +37,34 @@ class ImageWrap extends HTMLElement {
   }
 
   loadImage () {
-    const url = this.getAttribute('url')
-    fetch(url)
-      .then(response => response.blob())
-      .then(images => {
-        this.querySelector('img').setAttribute('src', url);
-        this.querySelector('.image-loading').classList.add('hidden');
-        this.querySelector('img').classList.add('loaded');
-      });
+    let url = this.getAttribute('url');
+    if (!url) {
+      setTimeout(() => {
+        url = this.getAttribute('url');
+        fetch(url)
+        .then(response => response.blob())
+        .then(images => {
+          this.querySelector('img').setAttribute('src', url);
+          this.querySelector('.image-loading').classList.add('hidden');
+          this.querySelector('img').classList.add('loaded');
+        });
+      }, 1000)
+
+    } else {
+      fetch(url)
+        .then(response => response.blob())
+        .then(images => {
+          this.querySelector('img').setAttribute('src', url);
+          this.querySelector('.image-loading').classList.add('hidden');
+          this.querySelector('img').classList.add('loaded');
+        });
+    }
+
+
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
   }
 }
 

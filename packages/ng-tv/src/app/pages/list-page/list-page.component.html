@@ -4,7 +4,8 @@
 <div class="card">
   <ul>
     <li *ngFor="let show of searchService.shows | async as shows; index as i; first as isFirst">
-      <img src="{{show.show?.image?.medium}}"/>
+      <image-wrap attr.url="{{show.show?.image?.medium}}"></image-wrap>
+      <!-- <img src="{{show.show?.image?.medium}}"/> -->
       <div class="info-wrap">
         <div class="grid headings">
           <div class="title col-span-6-12">

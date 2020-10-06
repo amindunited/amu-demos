@@ -1,0 +1,80 @@
+//////////////////////
+// OTHER VARIABLES //
+////////////////////
+$alpha_varient: 0.1 !default;
+$colour_varient: 7% !default;
+
+$WHITE: #ffffff !default;
+$BLACK: #000000 !default;
+
+$GREY_LIGHTEST: #F3F4F5 !default;
+$GREY_LIGHT: #D0D5D8 !default;
+$GREY: #8A939D !default;
+$GREY_DARK: #535F67 !default;
+$GREY_DARKEST: #292F33 !default;
+
+// Primary Brand Colour
+$BRAND_PRIMARY_LIGHTEST: #F2DEDE !default;
+$BRAND_PRIMARY_LIGHT: #EDCBCB !default;
+$BRAND_PRIMARY: #DC1928 !default;
+$BRAND_PRIMARY_DARK: #BC111E !default;
+$BRAND_PRIMARY_DARKEST: darken( $BRAND_PRIMARY_DARK, $colour_varient ) !default;
+
+// Secondary Brand Colour
+$BRAND_SECONDARY_LIGHTEST: #E6EFF5 !default;
+$BRAND_SECONDARY_LIGHT: #D3E2EB !default;
+$BRAND_SECONDARY: #1064A3 !default;
+$BRAND_SECONDARY_DARK: #0D72A8 !default;
+$BRAND_SECONDARY_DARKEST: darken( $BRAND_SECONDARY_DARK, $colour_varient ) !default;
+
+// Tertiary Brand Colour
+// $BRAND_TERTIARY_LIGHTEST: #F2DEDE !default;
+// $BRAND_TERTIARY_LIGHT: #EDCBCB !default;
+// $BRAND_TERTIARY: #DC1928 !default;
+// $BRAND_TERTIARY_DARK: #BC111E !default;
+// $BRAND_TERTIARY_DARKEST: darken( $BRAND_TERTIARY_DARK, $colour_varient ) !default;
+
+// $SUCCESS (Usually Greens)
+$SUCCESS_LIGHTEST: #DFF0D8 !default;
+$SUCCESS_LIGHT: #D1E8CE !default;
+$SUCCESS: #3E753f !default;
+$SUCCESS_DARK: darken( $SUCCESS, $colour_varient ) !default;
+$SUCCESS_DARKEST: darken( $SUCCESS_DARK, $colour_varient ) !default;
+
+// $INFO (Usually Blues)
+$INFO_LIGHTEST: #E6EFF5 !default;
+$INFO_LIGHT: #D3E2EB !default;
+$INFO: #0D72A8 !default;
+$INFO_DARK: #0D72A8 !default;
+$INFO_DARKEST: darken( $INFO_DARK, $colour_varient ) !default;
+
+// $ERROR (Usually Reds)
+$ERROR_LIGHTEST: $BRAND_PRIMARY_LIGHTEST !default;
+$ERROR_LIGHT: $BRAND_PRIMARY_LIGHT !default;
+$ERROR: $BRAND_PRIMARY !default;
+$ERROR_DARK: $BRAND_PRIMARY_DARK !default;
+$ERROR_DARKEST: darken( $ERROR_DARK, $colour_varient ) !default;
+
+// $WARN (Usually Yellows or Oranges)
+$WARN_LIGHTEST: #FCF8E2 !default;
+$WARN_LIGHT: #F3EDD5 !default;
+$WARN: #8A6D3B !default;
+$WARN_DARK: darken( $WARN, $colour_varient ) !default;
+$WARN_DARKEST: darken( $WARN_DARK, $colour_varient ) !default;
+
+// $PROMOTE (Usually a distinct colour that is not used else where)
+$PROMOTE: #8177E7 !default;
+
+$PROMOTE_LIGHT: lighten( $PROMOTE, $colour_varient ) !default;
+$PROMOTE_LIGHTEST: lighten( $PROMOTE_LIGHT, $colour_varient) !default;
+
+$PROMOTE_DARK: darken( $PROMOTE, $colour_varient ) !default;
+$PROMOTE_DARKEST: darken( $PROMOTE_DARK, $colour_varient ) !default;
+
+// Auxillary Colours
+$AUX_RED:    #F00 !default;
+$AUX_GREEN:  #00AC3E !default;
+$AUX_BLUE:   #009ED9 !default;
+$AUX_ORANGE: #FF9000 !default;
+$AUX_YELLOW: #EAB02A !default;
+$AUX_PURPLE: #8177E7 !default;

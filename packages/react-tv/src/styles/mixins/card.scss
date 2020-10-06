@@ -1,0 +1,28 @@
+@import '../variables/base.scss';
+@import '../variables/colours';
+// @import './breakpoints';
+
+$card_background-colour: white;
+$card_box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 0 2px 0 rgba(0, 0, 0, 0.06);
+
+@mixin card($padding_horizontal: 2, $padding_vertical: 2, $margin-bottom: 2) {
+  margin-bottom: $base_measure * $margin-bottom;
+  padding: ($base_measure * $padding_vertical) ($base_measure * $padding_horizontal);
+  height: auto;
+  width: auto;
+  box-shadow: $card_box-shadow;
+  border-radius: $border_radius;
+  background-color: $card_background-colour;
+}
+
+// @mixin card-with-toolbar($padding_horizontal: 2, $padding_vertical: 2) {
+//   @include card($padding_horizontal, $padding_vertical, 0);
+//   border-radius: 3px 3px 0px 0px;
+// }
+
+// @mixin toolbar($padding_horizontal: 2, $padding_vertical: 2, $margin-bottom: 2) {
+//   @include card($padding_horizontal, $padding_vertical, $margin-bottom);
+//   border: none;
+//   border-radius: 0px 0px 3px 3px;
+//   border-top: 1px solid $AP_P_Slate_Light;
+// }

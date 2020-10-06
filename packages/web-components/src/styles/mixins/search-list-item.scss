@@ -1,0 +1,24 @@
+li {
+  list-style: none;
+  display: block;
+  padding: $base-measure;
+
+  margin-bottom: $base-measure;
+
+  box-shadow: $card_box-shadow;
+
+  img {
+    max-height: 80px;
+    max-width: 80px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .info-wrap {
+    display: inline-block;
+    min-width: 80%;
+    height: 80px;
+    .headings {
+      font-weight: bold;
+    }
+  }
+}

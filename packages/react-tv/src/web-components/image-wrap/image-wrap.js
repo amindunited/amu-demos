@@ -1,25 +1,52 @@
-import htm from 'htm';
-import styles from './image-wrap.module.scss';
-import htmRenderer from '~/htm-renderer';
-
-const html = htm.bind(htmRenderer);
 
 class ImageWrap extends HTMLElement {
-
   constructor() {
     super();
+    this.shadow = this.attachShadow({mode: 'open'});
   }
 
   connectedCallback () {
-    const shadow = this.attachShadow({mode: 'closed'});
-    const styleEl = document.createElement('style');
-    styleEl.innerText = styles;
+    console.log('connected?');
+    const fragmentOne = document.createDocumentFragment();
+    const containerOne = document.createElement('div');
+    containerOne.innerHTML = `
+      <slot></slot>
+    `;
+    fragmentOne.appendChild(containerOne);
+    this.shadow.appendChild(fragmentOne);
 
-    shadow.appendChild(styleEl);
-    const content = html`<div>image-wrap Works!</div>`;
+    const fragmentTwo = document.createDocumentFragment();
+    const containerTwo = document.createElement('div');
+    containerTwo.innerHTML = `
+      <div class="image-wrap">
+        <img/>
+        <div class="image-loading">
+          <div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+    `;
 
-    shadow.appendChild(content);
+    this.addEventListener('click', () => {
+      const event = new Event('moop', { bubbles: true });
+      console.log('dispatch event ... moop');
+      this.dispatchEvent(event);
+    });
 
+    fragmentTwo.appendChild(containerTwo);
+    this.appendChild(fragmentTwo);
+    this.loadImage();
+
+  }
+
+  loadImage () {
+    const url = this.getAttribute('url')
+    fetch(url)
+      .then(response => response.blob())
+      .then(images => {
+        this.querySelector('img').setAttribute('src', url);
+        this.querySelector('.image-loading').classList.add('hidden');
+        this.querySelector('img').classList.add('loaded');
+      });
   }
 }
 

@@ -1,0 +1,43 @@
+@import '../../styles/variables/base.scss';
+
+$gutter: $base_measure * 2;
+$num_columns: 12;
+
+@mixin grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin row {
+  width: 100%;
+  @include grid;
+}
+
+
+@mixin column($col_span, $has_gutter:true) {
+
+  @if ($has_gutter) {
+    margin-left: ( $gutter / 2 );
+    margin-right: ( $gutter / 2 );
+  } @else {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  width: column_width($col_span, $has_gutter);
+
+}
+
+@function column_width ($col_span, $has_gutter:true) {
+  // $has_gutter: false !default;
+  $width: percentage(($col_span / $num_columns));
+
+  @if ($has_gutter) {
+    $width: calc( #{$width} - #{$gutter} );
+  }
+
+  @return $width;
+
+}

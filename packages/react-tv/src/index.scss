@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import './winter-2019-vars.scss';
+@import './styles/index.scss';
+@import './web-components/image-wrap/image-wrap.scss';
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html, body {
+  font-family: $base_font;
+  font-size: $base_font_size;
+  background-color: $GREY_DARKEST;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @include container;
+}
+.card {
+  @include card;
+  background-color: $WHITE;
+}
+
+.grid {
+  @include grid;
+  .col-span-1-12 { @include column(1); }
+  .col-span-2-12 { @include column(2); }
+  .col-span-3-12 { @include column(3); }
+  .col-span-4-12 { @include column(4); }
+  .col-span-5-12 { @include column(5); }
+  .col-span-6-12 { @include column(6); }
+  .col-span-7-12 { @include column(7); }
+  .col-span-8-12 { @include column(8); }
+  .col-span-9-12 { @include column(9); }
+  .col-span-10-12 { @include column(10); }
+  .col-span-11-12 { @include column(11); }
+  .col-span-12-12 { @include column(12); }
+}
+
+.row {
+  @include row;
+}
+
+button {
+  background-color: $BRAND_QUATERNARY;
+  border: none;
+  height: $base_measure * 6;
+  border-radius: $border_radius;
+  padding: $base_measure $base_measure * 2;
+  color: $BRAND_PRIMARY_DARK;
+  font-size: $base_measure * 2;
+  font-weight: bold;
 }

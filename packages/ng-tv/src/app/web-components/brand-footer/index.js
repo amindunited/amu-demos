@@ -1,10 +1,10 @@
-import headerCSS from './brand-footer.scss';
+import footerCSS from './brand-footer.scss';
 
 class BrandFooter extends HTMLElement {
   constructor() {
     super();
     this.shadow = this.attachShadow({mode: 'open'});
-    console.log('headerCSS', headerCSS);
+    console.log('footerCSS', footerCSS);
   }
 
   connectedCallback () {
@@ -12,7 +12,7 @@ class BrandFooter extends HTMLElement {
     const fragment = document.createDocumentFragment();
     const container = document.createElement('div');
     const styleTag = document.createElement('style');
-    styleTag.innerHTML = headerCSS;
+    styleTag.innerHTML = footerCSS;
     container.innerHTML = `
       <slot>
         <footer>

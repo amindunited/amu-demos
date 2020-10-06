@@ -1,5 +1,7 @@
 import ImageWrap from './web-components/image-wrap';
-import BrandHeader from './web-components/brand-header';
+// import BrandHeader from './web-components/brand-header';
+import BrandHeader from './wc-test/brand-header';
+// import BrandHeader from '@amu-demos/web-components/dist/brand-header';
 import BrandFooter from './web-components/brand-footer';
 // class Header{}
 // class Footer {}
